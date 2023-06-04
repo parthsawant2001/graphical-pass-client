@@ -1,0 +1,11 @@
+ul {
+  columns: 5;
+}
+
+div {
+  color: red;
+}
+
+li {
+  list-style: none;
+}

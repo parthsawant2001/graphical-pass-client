@@ -92,11 +92,14 @@ const register = () => {
   const onRegister = async (e) => {
     e.preventDefault();
     const password = selectedImages.join(',');
-    const response = await fetch('http://localhost:3000/register', {
-      method: 'POST',
-      body: JSON.stringify({ email, username, password }),
-      headers: { 'Content-Type': 'application/json' },
-    });
+    const response = await fetch(
+      'https://graph-pass-server.onrender.com/register',
+      {
+        method: 'POST',
+        body: JSON.stringify({ email, username, password }),
+        headers: { 'Content-Type': 'application/json' },
+      }
+    );
     console.log(username, email, password);
     console.log(response);
     if (response.status === 200) {
